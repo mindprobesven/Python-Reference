@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from name_function import get_formatted_name
 
 while True:

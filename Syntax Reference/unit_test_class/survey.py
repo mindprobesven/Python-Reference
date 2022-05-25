@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 class AnonymouseSurvery:
   def __init__(self, question):
     self.question = question

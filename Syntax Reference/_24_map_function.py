@@ -1,4 +1,7 @@
+#!/usr/bin/env python3
+
 # ----------------------------------------------------------------------------------------------------------------
+# map function
 # Returns a list of the results after applying the given function to each item of a given iterable (list, tuple etc.) 
 # ----------------------------------------------------------------------------------------------------------------
 
@@ -7,6 +10,7 @@ def addition(n):
 
 numbers = (1, 2, 3, 4)
 result = map(addition, numbers)
+print(result)   # <map object at 0xffff986477f0>
 print(list(result))
 
 # With lambda

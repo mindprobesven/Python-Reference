@@ -1,6 +1,8 @@
+#!/usr/bin/env python3
+
 from survey import AnonymouseSurvery
 
-question = "What language did you first learn to speak?"
+question = "Which languages did you first learn to speak?"
 my_survey = AnonymouseSurvery(question)
 
 my_survey.show_question()

@@ -1,12 +1,9 @@
 #!/usr/bin/env python3
 
-"""
-----------------------------------------------------------------------------------------------------------------
-Magic Methods
-
-- Magic methods are most frequently used to define overloaded behaviours of predefined operators in Python
-----------------------------------------------------------------------------------------------------------------
-"""
+# ----------------------------------------------------------------------------------------------------------------
+# Magic methods
+# Magic methods are most frequently used to define overloaded behaviours of predefined operators in Python
+# ----------------------------------------------------------------------------------------------------------------
 
 class Person:
     def __init__(self, first_name, last_name, salary):
