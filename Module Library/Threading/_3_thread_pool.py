@@ -1,3 +1,10 @@
+#!/usr/bin/env python3
+
+# ----------------------------------------------------------------------------------------------------------------
+# Threading - ThreadPoolExecutor
+# An easier way to start up a group of threads.
+# ----------------------------------------------------------------------------------------------------------------
+
 import concurrent.futures
 import logging
 import threading
@@ -13,7 +20,7 @@ if __name__ == "__main__":
     logging.basicConfig(format=format, level=logging.INFO,
                         datefmt="%H:%M:%S")
 
-    # ----------- Starting a group of threads the hard way
+    # Starting a group of threads the hard way
     threads = list()
     for index in range(3):
         logging.info("Main    : create and start thread %d.", index)
@@ -29,8 +36,10 @@ if __name__ == "__main__":
     time.sleep(2.0)
     print("-" * 50)
 
-    # ----------- Starting a group of threads the easier way with ThreadPoolExecutor
-    # The end of the with block causes the ThreadPoolExecutor to do a .join() on each of the threads in the pool automatically
+    # Starting a group of threads the easier way with ThreadPoolExecutor
+    # The easiest way to create it is as a context manager, using the with statement to manage the creation and
+    # destruction of the pool. The end of the with block causes the ThreadPoolExecutor to do a .join() on each
+    # of the threads in the pool automatically.
     with concurrent.futures.ThreadPoolExecutor(max_workers=6) as executor:
         # using map iterable
         executor.map(thread_function, range(3))

@@ -5,7 +5,7 @@
 # ----------------------------------------------------------------------------------------------------------------
 
 import platform
-from _11_functions import buildUserProfile as userInfo
+from _11a_functions import buildUserProfile as userInfo
 
 user = userInfo('Sven', 'Kohn', occupation='Engineer', age=39)
 

@@ -1,3 +1,9 @@
+#!/usr/bin/env python3
+
+# ----------------------------------------------------------------------------------------------------------------
+# Threading - Multiple threads
+# ----------------------------------------------------------------------------------------------------------------
+
 import concurrent.futures
 import logging
 import threading
@@ -22,5 +28,8 @@ if __name__ == "__main__":
 
     for index, thread in enumerate(threads):
         logging.info("Main    : before joining thread %d.", index)
+        # The main thread will pause here and wait for a thread to complete running.
         thread.join()
         logging.info("Main    : thread %d done", index)
+    
+    logging.info("Main    : All done")
