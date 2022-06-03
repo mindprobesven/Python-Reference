@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 
 # ---------------------------------------------------------------------------------------------------------------
-# Request the Task to be cancelled. 
+# Request a Task to be cancelled
+#
 # This arranges for a CancelledError exception to be thrown into the wrapped coroutine on the next cycle of the 
 # event loop. The coroutine then has a chance to clean up or even deny the request by suppressing the exception 
 # with a try … … except CancelledError … finally block.
